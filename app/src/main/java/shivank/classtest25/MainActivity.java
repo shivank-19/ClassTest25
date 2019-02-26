@@ -90,16 +90,22 @@ public class MainActivity extends AppCompatActivity
                     n = (s * 10);
                     Toast.makeText(MainActivity.this, "Your payment is Rs. "+n, Toast.LENGTH_SHORT).show();
                 }
-
-
             }
         });
-
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(MainActivity.this, MainActivity.class));
+                textView.setText("0");
+                numset = 0;
+                if (ch1.isChecked())
+                {
+                    ch1.setChecked(false);
+                }
+                if (ch2.isChecked())
+                {
+                    ch2.setChecked(false);
+                }
             }
         });
     }
